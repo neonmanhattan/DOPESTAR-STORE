@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweaters & Jackets | DopeStar Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <span class="brand-name">DopeStar Store</span>
+      <span class="brand-sub">Clothing Store, Jewelry &amp; Watches · Kampala</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+      <li><a href="payment.html">Payment</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="section-label">Sweaters & Jackets</p>
+      <h1>Sweaters & Jackets</h1>
+      <p>Warm and stylish picks for cooler days.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-inner">
+      <main>
+        <div class="shop-toolbar">
+          <p class="result-count">Showing sweaters & jackets</p>
+          <select class="category-nav" id="category-nav-select" aria-label="Jump to category">
+            <option value="">Browse category...</option>
+            <option value="shop.html">All</option>
+            <option value="shirts.html">Shirts</option>
+            <option value="sweaters-jackets.html" selected>Sweaters &amp; Jackets</option>
+            <option value="pants.html">Pants</option>
+            <option value="accessories.html">Accessories</option>
+          </select>
+          <select class="sort-select" id="sort-select">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+
+        <div class="card-grid" id="product-grid">
+
+          <div class="product-card" data-cat="sweaters" data-price="38000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Quarter zip sweaters brown.jpeg" class="shop-img" alt="Quarter Zip Sweater">
+            </div>
+            <div class="card-body">
+              <div class="card-category">Sweaters</div>
+              <div class="card-title">Quarter Zip Sweater</div>
+              <div class="card-price">UGX 38,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="jackets" data-price="65000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Woolen Jackets black 1.jpeg" class="shop-img" alt="Woolen Jacket">
+            </div>
+            <div class="card-body">
+              <div class="card-category">Jackets</div>
+              <div class="card-title">Woolen Jacket</div>
+              <div class="card-price">UGX 65,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="sweaters" data-price="120000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Puma black.jpeg" class="shop-img" alt="Sweater Pants">
+            </div>
+            <div class="card-body">
+              <div class="card-category">Sweater-Pants</div>
+              <div class="card-title">Puma Sweater-Pants</div>
+              <div class="card-price">UGX 120,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+        </div><!-- /card-grid -->
+      </main>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-name">DopeStar Store</div>
+        <p>Your go-to destination for affordable, stylish clothing in the heart of Kampala.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DopeStar Store. All rights reserved.</span>
+      <span>CAPITAL CENTERs · Kampala</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>

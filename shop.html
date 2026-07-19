@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | DopeStar Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <span class="brand-name">DopeStar Store</span>
+      <span class="brand-sub">Clothing Store, Jewelry &amp; Watches · Kampala</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+      <li><a href="payment.html">Payment</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="section-label">Kampala's Best</p>
+      <h1>Our Collection</h1>
+      <p>Hand-picked pieces for every occasion, every body, every budget.</p>
+    </div>
+  </div>
+
+  <!-- Shop Layout -->
+  <section class="section">
+    <div class="section-inner shop-layout">
+
+      <!-- Sidebar Filters -->
+      <aside class="filters">
+        <h3 class="filter-title">Filter By</h3>
+
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label><input type="radio" name="cat" value="all" checked /> All Items</label>
+          <label><input type="radio" name="cat" value="Shirts" /> Shirts</label>
+          <label><input type="radio" name="cat" value="suits" /> Suits &amp; Jackets</label>
+          <label><input type="radio" name="cat" value="accessories" /> Accessories</label>
+          <label><input type="radio" name="cat" value="menswear" /> Menswear</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <label><input type="radio" name="price" value="all" checked /> All Prices</label>
+          <label><input type="radio" name="price" value="low" /> Under UGX 50,000</label>
+          <label><input type="radio" name="price" value="mid" /> UGX 50k – 100k</label>
+          <label><input type="radio" name="price" value="high" /> UGX 100k+</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Size</h4>
+          <div class="size-grid">
+            <button class="size-btn active">XS</button>
+            <button class="size-btn active">S</button>
+            <button class="size-btn active">M</button>
+            <button class="size-btn active">L</button>
+            <button class="size-btn active">XL</button>
+            <button class="size-btn active">XXL</button>
+          </div>
+        </div>
+
+        <button class="btn btn-dark" style="width:100%;margin-top:1rem" id="apply-filters">Apply Filters</button>
+      </aside>
+
+      <!-- Products Grid -->
+      <main>
+        <div class="shop-toolbar">
+          <p class="result-count" id="result-count">Showing all items</p>
+          <select class="category-nav" id="category-nav-select" aria-label="Jump to category">
+            <option value="">Browse category...</option>
+            <option value="shirts.html">Shirts</option>
+            <option value="sweaters-jackets.html">Sweaters &amp; Jackets</option>
+            <option value="pants.html">Pants</option>
+            <option value="accessories.html">Accessories</option>
+          </select>
+          <select class="sort-select" id="sort-select">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+
+        <div class="card-grid" id="product-grid">
+
+          <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="Shirts" data-price="72000">
+            <div class="card-img-placeholder">
+              <img src="pictures/jeans  blue.jpeg"  class="shop-img" alt="Stretchy jeans">
+              <div class="variant-images">
+                <img data-color="blue" src="pictures/jeans  blue.jpeg" alt="Blue variant">
+                <img data-color="Dark-grey" src="pictures/jeans  grey.jpeg" alt="Grey variant">
+                <img data-color="black" src="pictures/jeans black .jpeg" alt="Black variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Jeans</div>
+              <div class="card-title">Stretchy Jeans</div>
+              <div class="card-price">UGX 72,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+            </div>
+          <div class="product-card" data-cat="Shirts" data-price="110000">
+            <div class="card-img-placeholder">
+              <img src="pictures/stripped.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="Striped" src="pictures/stripped blue.jpeg" alt="Striped  variant">
+                <img data-color="green " src="pictures/stripped green.jpeg" alt="green variant">
+                <img data-color="purple" src="pictures/stripped purple.jpeg" alt="purple variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Shirts</div>
+              <div class="card-title">Stripped Cuban Shirts</div>
+              <div class="card-price">UGX 110,000 <span class="old">140,000</span></div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="tops" data-price="45000">
+            <div class="card-img-placeholder">
+              <img src="pictures/long 4.jpeg" class="shop-img" alt="Silk-Touch Peplum">
+              <div class="variant-images">
+                <img data-color="White" src="pictures/long 4.jpeg" alt="White variant">
+                <img data-color="Black" src="pictures/long 4.jpeg" alt="Black variant">
+                <img data-color="Beige" src="pictures/long 4.jpeg" alt="Beige variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">T-Shirts</div>
+              <div class="card-title">Long Sleeved T-Shirt</div>
+              <div class="card-price">UGX 45,000 <span class="old">60,000</span></div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="tops" data-price="38000">
+            <div class="card-img-placeholder">
+              <img  src="pictures/Quarter zip sweaters brown.jpeg" class="shop-img" alt="Linen Off-Shoulder">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Quarter zip sweaters black.jpeg" alt="Grey variant">
+                <img data-color="orange" src="pictures/Quarter zip sweaters orange.jpeg" alt="Navy variant">
+                <img data-color="cream" src="pictures/Quarter zip sweaters cream.jpeg" alt="Maroon variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Sweaters</div>
+              <div class="card-title">Quarter Zip Sweater</div>
+              <div class="card-price">UGX 38,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="suits" data-price="120000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Puma black.jpeg" class="shop-img" alt="Tailored Blazer — Black">
+              <div class="variant-images">
+                <img data-color="Black" src="pictures/Puma black.jpeg" alt="Black variant">
+                <img data-color="pink" src="pictures/Puma pink.jpeg" alt="pink variant">
+                <img data-color="green" src="pictures/Puma green.jpeg" alt="green variant">
+                <img data-color="cream" src="pictures/Puma cream.jpeg" alt=" cream variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Sweater-Pants</div>
+              <div class="card-title">Puma Sweater-Pants</div>
+              <div class="card-price">UGX 120,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="suits" data-price="180000">
+            <div class="card-img-placeholder">
+              <img src="pictures/black.jpeg" class="shop-img" alt="Men's Power Suit">
+              <div class="variant-images">
+                <img data-color="grey" src="pictures/grey.jpeg" alt="grey variant">
+                <img data-color="brown" src="pictures/brown.jpeg" alt="brown variant">
+                <img data-color="light grey" src="pictures/grey 1.jpeg" alt="light grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Suits</div>
+              <div class="card-title">Men's Power Suit</div>
+              <div class="card-price">UGX 180,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="accessories" data-price="35000">
+            <div class="card-img-placeholder">
+              <img src="pictures/watch 1.jpeg" class="shop-img" alt="Woven Straw Tote">
+              <div class="variant-images">
+                <img data-color="Black" src="pictures/watch 1.jpeg" alt="Black variant">
+                <img data-color="Gold" src="pictures/watch 1.jpeg" alt="Gold variant">
+                <img data-color="Silver" src="pictures/watch 1.jpeg" alt="Silver variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Accessories</div>
+              <div class="card-title">Classic-Watches</div>
+              <div class="card-price">UGX 35,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="accessories" data-price="22000">
+            <div class="card-img-placeholder">
+              <img src="pictures/rings.jpeg" class="shop-img" alt="Beaded Clutch">
+              <div class="variant-images">
+                <img data-color="Gold" src="pictures/gold neckless.jpeg" alt="Gold variant">
+                <img data-color="black" src="pictures/neckless.jpeg" alt="black variant">
+                <img data-color="Silver" src="pictures/rings.jpeg" alt="Silver variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Accessories</div>
+              <div class="card-title">Jewelry</div>
+              <div class="card-price">UGX 22,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="menswear" data-price="95000">
+            <div class="card-img-placeholder">
+              <img src="pictures/knitted tshirt 2.jpeg" class="shop-img" alt="Classic Slim Shirt">
+              <div class="variant-images">
+                <img data-color="white" src="pictures/knitted tshirt  white .jpeg" alt="white variant">
+                <img data-color="Grey" src="pictures/knitted tshirt grey.jpeg" alt="Grey variant">
+                <img data-color="black" src="pictures/knitted tshirt black.jpeg" alt="black variant">
+                <img data-color="green" src="pictures/knitted tshirt green.jpeg" alt="green variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Menswear</div>
+              <div class="card-title">Knitted T-Shirts</div>
+              <div class="card-price">UGX 95,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="menswear" data-price="150000">
+            <div class="card-img-placeholder">
+              <img src="pictures/cuban black.jpeg" class="shop-img" alt="Ankara Kaftan Set">
+              <div class="variant-images">
+                <img data-color="white" src="pictures/cuban white.jpeg" alt="White variant">
+                <img data-color="Black" src="pictures/cuban black.jpeg" alt="Black variant">
+                <img data-color="Green" src="pictures/cuban green.jpeg" alt="Green variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Menswear</div>
+              <div class="card-title">Cuban 2-Piece</div>
+              <div class="card-price">UGX 150,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="Shirts" data-price="65000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Woolen Jackets black 1.jpeg" class="shop-img" alt="Kitenge Wrap Skirt">
+              <div class="variant-images">
+                <img data-color="Brown" src="pictures/Woolen Jackets brown.jpeg" alt="Brown variant">
+                <img data-color="Black" src="pictures/Woolen Jackets black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Woolen Jackets blue.jpeg" alt="Blue variant">
+                <img data-color="pink" src="pictures/Woolen Jackets pink.jpeg" alt="Pink variant">
+                <img data-color="White" src="pictures/Woolen Jackets white.jpeg" alt="White variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Jackets</div>
+              <div class="card-title">Woolen Jackets</div>
+              <div class="card-price">UGX 65,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="sweater pants" data-price="65000">
+            <div class="card-img-placeholder">
+              <img src="pictures/SweatPants black.jpeg" class="shop-img" alt="Kitenge Wrap Skirt">
+              <div class="variant-images">
+                <img data-color="Black" src="pictures/SweatPants black 1.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/SweatPants blue.jpeg" alt="Blue variant">
+                <img data-color="red" src="pictures/SweatPants red.jpeg" alt="red variant">
+                <img data-color="white" src="pictures/SweatPants white .jpeg" alt="white variant">
+                <img data-color="grey" src="pictures/SweatPants grey.jpeg" alt="grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Sweater-Pants</div>
+              <div class="card-title">Woolen Sweater-pants</div>
+              <div class="card-price">UGX 65,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+           <div class="product-card" data-cat="Shirts" data-price="85000">
+            <div class="card-img-placeholder">
+              <img src="pictures/Cuban shirts with Beltless pants white.jpeg" class="shop-img" alt="Evening Maxi Gown">
+              <div class="variant-images">
+                <img data-color="black" src="pictures/Cuban shirts with Beltless pants black.jpeg" alt="Black variant">
+                <img data-color="Blue" src="pictures/Cuban shirts with Beltless pants blue.jpeg" alt="Blue variant">
+                <img data-color="Grey" src="pictures/Cuban shirts with Beltless pants grey.jpeg
+                " alt="Grey variant">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Cuban &amp; Pants</div>
+              <div class="card-title">Cuban-Shirt &amp; Beltless-Pants</div>
+              <div class="card-price">UGX 85,000</div>
+              <button class="btn btn-dark" style="width:100%;margin-top:.8rem" data-action="cart">Add to Bag</button>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div><!-- /card-grid -->
+      </main>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-name">DopeStar Store</div>
+        <p>Your go-to destination for affordable, stylish clothing in the heart of Kampala.</p>
+        <div class="social-row">
+<a href="https://wa.me/256706210339" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">w</a>
+          <a href="https://www.instagram.com/manhattan_neonleon" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">in</a>
+
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="#">CAPITAL CENTER</a></li>
+          <li><a href="#">Nabugabo Street</a></li>
+          <li><a href="#">Kampala, Uganda</a></li>
+          <li><a href="tel:0706210339">0706210339</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DopeStar Store. All rights reserved.</span>
+      <span>CAPITAL CENTER · Kampala</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>

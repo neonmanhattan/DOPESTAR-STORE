@@ -1,0 +1,454 @@
+/* ── PAYMENT PAGE STYLES ── */
+
+.page-hero {
+  background: var(--plum);
+  padding: 5.5rem 5%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(201,169,110,0.03) 0px, rgba(201,169,110,0.03) 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(-45deg, rgba(201,169,110,0.03) 0px, rgba(201,169,110,0.03) 1px, transparent 1px, transparent 20px);
+  z-index: 1;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(201, 169, 110, 0.08);
+  filter: blur(60px);
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+.page-hero h1 { 
+  color: var(--white); 
+  font-size: clamp(2.2rem, 5vw, 3.5rem); 
+  margin: 0.4rem 0 0.8rem; 
+  font-weight: 900;
+}
+.page-hero p { 
+  color: rgba(255,255,255,0.75); 
+  font-size: 1.05rem; 
+}
+
+/* Layout */
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Method Tabs */
+.method-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+}
+.method-tab {
+  background: var(--white);
+  border: 2px solid rgba(1, 60, 34, 0.05);
+  border-radius: 20px;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: var(--shadow);
+}
+.method-tab .mt-icon { 
+  font-size: 2.2rem; 
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+}
+.method-tab .mt-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+  transition: var(--transition);
+}
+.method-tab:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 169, 110, 0.25);
+  box-shadow: var(--shadow-hover);
+}
+.method-tab.active {
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.65);
+  box-shadow: var(--shadow);
+}
+.method-tab.active .mt-label { 
+  color: var(--plum); 
+}
+
+.payment-panel { 
+  display: none; 
+}
+.payment-panel.active { 
+  display: block; 
+  animation: panelFadeIn 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@keyframes panelFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Money Provider Cards */
+.mm-providers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.mm-card {
+  position: relative;
+  cursor: pointer;
+}
+.mm-card input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.mm-card-body {
+  border: 2px solid rgba(1, 60, 34, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.mm-card:hover .mm-card-body {
+  transform: translateY(-3px);
+  border-color: rgba(201, 169, 110, 0.25);
+  box-shadow: var(--shadow-hover);
+}
+.mm-card input:checked + .mm-card-body {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+}
+.mm-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--white);
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.mm-logo.mtn { 
+  background: #ffcc08; 
+  color: #1c1c1c; 
+}
+.mm-logo.airtel { 
+  background: #ed1c24; 
+}
+.mm-card-body strong { 
+  display: block; 
+  font-size: 0.95rem; 
+  color: var(--plum);
+}
+.mm-card-body span { 
+  font-size: 0.8rem; 
+  color: var(--muted); 
+}
+
+/* Details Box (Frosted Glass) */
+.pay-detail-box {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  display: none;
+  box-shadow: var(--shadow);
+  margin-top: 1.5rem;
+}
+.pay-detail-box.show { 
+  display: block; 
+}
+.pay-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed rgba(0,0,0,0.06);
+}
+.pay-detail-row:last-child { 
+  border-bottom: none; 
+}
+.pdr-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pdr-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--plum);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.copy-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--plum);
+  color: var(--white);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.copy-btn:hover { 
+  background: var(--gold); 
+  color: var(--plum);
+  transform: translateY(-1px);
+}
+.copy-btn.copied { 
+  background: #2ecc71; 
+  color: var(--white); 
+}
+
+.pay-instructions {
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.85;
+  background: var(--white);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow-inset);
+}
+.pay-instructions ol { 
+  padding-left: 1.2rem; 
+}
+.pay-instructions li {
+  margin-bottom: 0.4rem;
+}
+
+/* Bank list */
+.bank-providers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.bank-card { 
+  position: relative; 
+  cursor: pointer; 
+}
+.bank-card input { 
+  position: absolute; 
+  opacity: 0; 
+  pointer-events: none; 
+}
+.bank-card-body {
+  border: 2px solid rgba(1, 60, 34, 0.05);
+  border-radius: 16px;
+  padding: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.bank-card:hover .bank-card-body {
+  transform: translateY(-2px);
+  border-color: rgba(201, 169, 110, 0.25);
+  box-shadow: var(--shadow-hover);
+}
+.bank-card input:checked + .bank-card-body {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+}
+.bank-card-body strong { 
+  font-size: 0.98rem; 
+  color: var(--plum);
+  display: block; 
+}
+.bank-card-body span { 
+  font-size: 0.8rem; 
+  color: var(--muted); 
+}
+.bank-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--plum);
+  color: var(--gold);
+  padding: 0.3rem 0.8rem;
+  border-radius: 30px;
+}
+
+/* Input Fields inside Checkout */
+.ref-field {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ref-field label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--plum);
+}
+.ref-field input {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid rgba(1, 60, 34, 0.08);
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--charcoal);
+  outline: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-inset);
+}
+.ref-field input:focus { 
+  border-color: var(--gold); 
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+.ref-hint { 
+  font-size: 0.8rem; 
+  color: var(--muted); 
+  margin-top: 0.3rem; 
+  font-weight: 500;
+}
+
+/* Order Summary Frosted Glass Card */
+.order-summary {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 2.5rem 2.2rem;
+  position: sticky;
+  top: 110px;
+  box-shadow: var(--shadow);
+}
+.order-summary h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--plum);
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 2px solid rgba(201, 169, 110, 0.3);
+}
+.os-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #555;
+  gap: 0.8rem;
+}
+.os-item span:first-child { 
+  flex: 1; 
+}
+.os-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+  color: #555;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+.os-row.total {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--plum);
+}
+.os-row.total span:last-child { 
+  color: var(--gold); 
+}
+
+.confirm-btn { 
+  width: 100%; 
+  margin-top: 1.5rem; 
+}
+.confirm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secure-note {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 1.2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .payment-layout { 
+    grid-template-columns: 1fr; 
+    gap: 2.5rem;
+  }
+  .order-summary { 
+    position: static; 
+  }
+}
+
+@media (max-width: 600px) {
+  .mm-providers { 
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+  .method-tabs {
+    gap: 0.8rem;
+  }
+}

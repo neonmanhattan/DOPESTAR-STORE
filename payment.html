@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment | DopeStar Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="payment.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <span class="brand-name">DopeStar Store</span>
+      <span class="brand-sub">Clothing Store, Jewelry &amp; Watches · Kampala</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+      <li><a href="payment.html">Payment</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="section-label">Secure Checkout</p>
+      <h1>Complete Your Payment</h1>
+      <p>Pay by Mobile Money or directly into our Uganda bank account.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-inner payment-layout">
+
+      <div>
+        <p class="section-label">Choose a Method</p>
+        <h2 class="section-title">How Would You Like to Pay?</h2>
+        <div class="divider"></div>
+
+        <div class="method-tabs">
+          <div class="method-tab active" data-method="momo">
+            <span class="mt-icon">📱</span>
+            <span class="mt-label">Mobile Money</span>
+          </div>
+          <div class="method-tab" data-method="bank">
+            <span class="mt-icon">🏦</span>
+            <span class="mt-label">Bank Transfer</span>
+          </div>
+        </div>
+
+        <!-- MOBILE MONEY PANEL -->
+        <div class="payment-panel active" id="panel-momo">
+          <div class="mm-providers">
+            <label class="mm-card">
+              <input type="radio" name="momo-provider" value="mtn" checked />
+              <div class="mm-card-body">
+                <div class="mm-logo mtn">MTN</div>
+                <div>
+                  <strong>MTN MoMo</strong>
+                  <span>Pay via MTN Mobile Money</span>
+                </div>
+              </div>
+            </label>
+            <label class="mm-card">
+              <input type="radio" name="momo-provider" value="airtel" />
+              <div class="mm-card-body">
+                <div class="mm-logo airtel">Airtel</div>
+                <div>
+                  <strong>Airtel Money</strong>
+                  <span>Pay via Airtel Money</span>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <div class="pay-detail-box show" id="momo-detail-mtn">
+            <div class="pay-detail-row">
+              <span class="pdr-label">Merchant / Agent Name</span>
+              <span class="pdr-value">DopeStar Store</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">MTN MoMo Number</span>
+              <span class="pdr-value">0706 210 339 <button class="copy-btn" data-copy="0706210339">Copy</button></span>
+            </div>
+            <div class="pay-instructions">
+              <strong>How to pay:</strong>
+              <ol>
+                <li>Dial <strong>*165#</strong> on your MTN line.</li>
+                <li>Select <strong>Send Money</strong>.</li>
+                <li>Enter <strong>0706210339</strong> as the recipient.</li>
+                <li>Enter the exact total shown in your order summary.</li>
+                <li>Confirm with your MoMo PIN and save the SMS confirmation message.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="pay-detail-box" id="momo-detail-airtel">
+            <div class="pay-detail-row">
+              <span class="pdr-label">Merchant / Agent Name</span>
+              <span class="pdr-value">DopeStar Store</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Airtel Money Number</span>
+              <span class="pdr-value">0754 376 230 <button class="copy-btn" data-copy="0754376230">Copy</button></span>
+            </div>
+            <div class="pay-instructions">
+              <strong>How to pay:</strong>
+              <ol>
+                <li>Dial <strong>*185#</strong> on your Airtel line.</li>
+                <li>Select <strong>Send Money</strong> → <strong>To Airtel Number</strong>.</li>
+                <li>Enter <strong>0754376230</strong> as the recipient.</li>
+                <li>Enter the exact total shown in your order summary.</li>
+                <li>Confirm with your Airtel Money PIN and save the SMS confirmation message.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- BANK TRANSFER PANEL -->
+        <div class="payment-panel" id="panel-bank">
+          <div class="bank-providers">
+            <label class="bank-card">
+              <input type="radio" name="bank-provider" value="stanbic" checked />
+              <div class="bank-card-body">
+                <div>
+                  <strong>Stanbic Bank Uganda</strong>
+                  <span>Current Account · Branch: Kampala Road</span>
+                </div>
+                <span class="bank-tag">Recommended</span>
+              </div>
+            </label>
+            <label class="bank-card">
+              <input type="radio" name="bank-provider" value="centenary" />
+              <div class="bank-card-body">
+                <div>
+                  <strong>Centenary Bank</strong>
+                  <span>Current Account · Branch: Nabugabo</span>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <label class="bank-card">
+              <input type="radio" name="bank-provider" value="EQUTY" />
+              <div class="bank-card-body">
+                <div>
+                  <strong>EQUTY Bank</strong>
+                  <span>Current Account · Branch: Nabugabo</span>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <div class="pay-detail-box show" id="bank-detail-stanbic">
+            <div class="pay-detail-row">
+              <span class="pdr-label">Account Name</span>
+              <span class="pdr-value">DopeStar Store Ltd</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Account Number</span>
+              <span class="pdr-value">9030012458761 <button class="copy-btn" data-copy="9030012458761">Copy</button></span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Branch</span>
+              <span class="pdr-value">Kampala Road</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Swift Code</span>
+              <span class="pdr-value">SBICUGKX <button class="copy-btn" data-copy="SBICUGKX">Copy</button></span>
+            </div>
+            <div class="pay-instructions">
+              <strong>How to pay:</strong>
+              <ol>
+                <li>Visit any Stanbic Bank branch or use the Stanbic mobile app.</li>
+                <li>Transfer the exact total shown in your order summary.</li>
+                <li>Use your name as the payment reference.</li>
+                <li>Keep your deposit slip or transfer receipt as proof of payment.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="pay-detail-box" id="bank-detail-centenary">
+            <div class="pay-detail-row">
+              <span class="pdr-label">Account Name</span>
+              <span class="pdr-value">DopeStar Store Ltd</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Account Number</span>
+              <span class="pdr-value">3100098765432 <button class="copy-btn" data-copy="3100098765432">Copy</button></span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Branch</span>
+              <span class="pdr-value">Nabugabo</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Swift Code</span>
+              <span class="pdr-value">CECEUGKA <button class="copy-btn" data-copy="CECEUGKA">Copy</button></span>
+            </div>
+            <div class="pay-instructions">
+              <strong>How to pay:</strong>
+              <ol>
+                <li>Visit any Centenary Bank branch or use Centenary Mobile Banking.</li>
+                <li>Transfer the exact total shown in your order summary.</li>
+                <li>Use your name as the payment reference.</li>
+                <li>Keep your deposit slip or transfer receipt as proof of payment.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-field">
+          <label for="pay-name">Your Full Name</label>
+          <input type="text" id="pay-name" placeholder="e.g. Sarah Nakato" />
+        </div>
+        <div class="ref-field">
+          <label for="pay-phone">Phone Number Used for Payment</label>
+          <input type="tel" id="pay-phone" placeholder="e.g. 0712 345 678" />
+          <p class="ref-hint">This helps us match your payment quickly.</p>
+        </div>
+        <div class="ref-field">
+          <label for="pay-ref">Transaction ID / Reference (optional)</label>
+          <input type="text" id="pay-ref" placeholder="e.g. MP240611.1234.A56789" />
+          <p class="ref-hint">Found in your Mobile Money or bank confirmation SMS.</p>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <aside class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="os-items"></div>
+        <div class="os-row">
+          <span>Subtotal</span>
+          <span id="os-subtotal">UGX 0</span>
+        </div>
+        <div class="os-row">
+          <span>Delivery </span>
+          <span id="os-delivery">UGX 0</span>
+        </div>
+        <div class="os-row total">
+          <span>Total Due</span>
+          <span id="os-total">UGX 0</span>
+        </div>
+        <button class="btn btn-primary confirm-btn" id="confirm-payment">I've Made Payment</button>
+        <p class="secure-note">🔒 Your order details are sent directly to our team via WhatsApp for confirmation</p>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-name">DopeStar Store</div>
+        <p>Your go-to destination for affordable, stylish clothing in the heart of Kampala.</p>
+        <div class="social-row">
+<a href="https://wa.me/256706210339" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">w</a>
+          <a href="https://www.instagram.com/manhattan_neonleon" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">in</a>
+
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="#">CAPITAL CENTERs</a></li>
+          <li><a href="#">Nabugabo Street</a></li>
+          <li><a href="#">Kampala, Uganda</a></li>
+          <li><a href="tel:0706210339">0706210339</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DopeStar Store. All rights reserved.</span>
+      <span>CAPITAL CENTERs · Kampala</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="payment.js"></script>
+</body>
+</html>
