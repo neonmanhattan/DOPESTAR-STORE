@@ -1,4 +1,4 @@
-/* ── SHOP PAGE STYLES ── */
+/* Shop Page */
 
 .shop-img {
   width: 100%;
@@ -6,54 +6,6 @@
   object-fit: cover;
   border-radius: 12px;
   transition: var(--transition-slow);
-}
-
-.page-hero {
-  background: var(--plum);
-  padding: 5.5rem 5%;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
-}
-
-.page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(45deg, rgba(201,169,110,0.03) 0px, rgba(201,169,110,0.03) 1px, transparent 1px, transparent 20px),
-    repeating-linear-gradient(-45deg, rgba(201,169,110,0.03) 0px, rgba(201,169,110,0.03) 1px, transparent 1px, transparent 20px);
-  z-index: 1;
-}
-
-.page-hero::after {
-  content: '';
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: rgba(201, 169, 110, 0.08);
-  filter: blur(60px);
-  z-index: 1;
-}
-
-.page-hero-content {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  z-index: 2;
-}
-.page-hero h1 {
-  color: var(--white);
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  margin: 0.4rem 0 0.8rem;
-  font-weight: 900;
-}
-.page-hero p {
-  color: rgba(255,255,255,0.75);
-  font-size: 1.05rem;
 }
 
 /* Shop Layout */
@@ -153,6 +105,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
   margin-bottom: 2rem;
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(8px);
@@ -160,6 +114,18 @@
   padding: 1rem 1.5rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.category-nav {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid rgba(1, 60, 34, 0.08);
+  border-radius: 30px;
+  background: var(--white);
+  color: var(--plum);
+  cursor: pointer;
+  outline: none;
 }
 .result-count {
   font-size: 0.9rem;

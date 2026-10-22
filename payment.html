@@ -11,8 +11,11 @@
 
   <nav>
     <a href="index.html" class="nav-brand">
-      <span class="brand-name">DopeStar Store</span>
-      <span class="brand-sub">Clothing Store, Jewelry &amp; Watches · Kampala</span>
+      <img src="pictures/logo.jpeg" alt="DopeStar Store Logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">DopeStar Store</span>
+        <span class="brand-sub">Clothing Store, Jewelry &amp; Watches · Kampala</span>
+      </div>
     </a>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -145,13 +148,12 @@
                 </div>
               </div>
             </label>
-          </div>
 
           <label class="bank-card">
-              <input type="radio" name="bank-provider" value="EQUTY" />
+              <input type="radio" name="bank-provider" value="equity" />
               <div class="bank-card-body">
                 <div>
-                  <strong>EQUTY Bank</strong>
+                  <strong>Equity Bank</strong>
                   <span>Current Account · Branch: Nabugabo</span>
                 </div>
               </div>
@@ -213,11 +215,26 @@
               </ol>
             </div>
           </div>
+
+          <div class="pay-detail-box" id="bank-detail-equity">
+            <div class="pay-detail-row">
+              <span class="pdr-label">Account Name</span>
+              <span class="pdr-value">DopeStar Store Ltd</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Account Number</span>
+              <span class="pdr-value">Contact us for account details</span>
+            </div>
+            <div class="pay-detail-row">
+              <span class="pdr-label">Branch</span>
+              <span class="pdr-value">Nabugabo</span>
+            </div>
+          </div>
         </div>
 
         <div class="ref-field">
           <label for="pay-name">Your Full Name</label>
-          <input type="text" id="pay-name" placeholder="e.g. Sarah Nakato" />
+          <input type="text" id="pay-name" placeholder="e.g. Moses Kato" />
         </div>
         <div class="ref-field">
           <label for="pay-phone">Phone Number Used for Payment</label>
@@ -240,14 +257,14 @@
           <span id="os-subtotal">UGX 0</span>
         </div>
         <div class="os-row">
-          <span>Delivery </span>
+          <span id="os-delivery-label">Delivery</span>
           <span id="os-delivery">UGX 0</span>
         </div>
         <div class="os-row total">
           <span>Total Due</span>
           <span id="os-total">UGX 0</span>
         </div>
-        <button class="btn btn-primary confirm-btn" id="confirm-payment">I've Made Payment</button>
+        <button type="button" class="btn btn-primary confirm-btn" id="confirm-payment">I've Made Payment</button>
         <p class="secure-note">🔒 Your order details are sent directly to our team via WhatsApp for confirmation</p>
       </aside>
 
@@ -278,7 +295,7 @@
       <div>
         <h4>Visit Us</h4>
         <ul>
-          <li><a href="#">CAPITAL CENTERs</a></li>
+          <li><a href="#">CAPITAL CENTER</a></li>
           <li><a href="#">Nabugabo Street</a></li>
           <li><a href="#">Kampala, Uganda</a></li>
           <li><a href="tel:0706210339">0706210339</a></li>
@@ -286,8 +303,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 DopeStar Store. All rights reserved.</span>
-      <span>CAPITAL CENTERs · Kampala</span>
+      <span>© 2026 DopeStar Store. All rights reserved.</span>
+      <span>CAPITAL CENTER · Kampala</span>
     </div>
   </footer>
 
