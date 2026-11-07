@@ -15,7 +15,7 @@ npm install
 cp .env.example .env.local
 ```
 
-Set `NEXT_PUBLIC_STORE_URL` to the public origin of the existing static website, for example `https://your-store-domain.example` (without a trailing slash). This enables the Store home, Shop, and Bag links.
+The existing store is available at `https://neonmanhattan.github.io/DOPESTAR-STORE`. The app uses that as the default for its Store home, Shop, and Bag links. Set `NEXT_PUBLIC_STORE_URL` to a different public store origin (without a trailing slash) only if you use a custom domain.
 
 For order tracking, set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in `.env.local`. These are server-side values; never rename the service-role key to a `NEXT_PUBLIC_` variable or commit `.env.local`.
 
@@ -45,7 +45,7 @@ Customer lookup is performed by a Next.js server route using the server-only Sup
 
 ## Connect the companion to the static website
 
-After deploying this app, add a link to its production URL in the static site navigation (for example, `Style & Size` pointing to `/style-finder` or `/size-guide`). Set `NEXT_PUBLIC_STORE_URL` in the companion deployment so its Store home, Shop, and Bag links point back to `index.html`, `shop.html`, and `cart.html` on the static site. The current static site’s deployed origin was not included in the project files, so it must be supplied in that setting.
+After deploying this app, add a link to its production URL in the static site navigation (for example, `Style & Size` pointing to `/style-finder` or `/size-guide`). The companion’s Store home, Shop, and Bag links point back to `index.html`, `shop.html`, and `cart.html` on the existing GitHub Pages site by default. Override `NEXT_PUBLIC_STORE_URL` in the deployment only if the static store uses a custom domain.
 
 ## Push to GitHub
 
