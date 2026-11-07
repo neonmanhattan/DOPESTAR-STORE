@@ -49,27 +49,23 @@ After deploying this app, add a link to its production URL in the static site na
 
 ## Push to GitHub
 
-Create an empty GitHub repository, then run these commands from this project directory:
+The companion lives in the existing `neonmanhattan/DOPESTAR-STORE` repository under `companion/`. From the repository root, push the companion branch:
 
 ```bash
-git init
-git add .
-git commit -m "Build DopeStar Store companion app"
-git branch -M main
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/dopestar-companion.git
-git push -u origin main
+git switch add-dopestar-companion
+git push -u origin add-dopestar-companion
 ```
 
-Replace `<YOUR_GITHUB_USERNAME>` with the account that owns the repository. Do not add `.env.local` or Supabase secrets to Git.
+Merge the branch into `main` when it is ready. Do not add `.env.local` or Supabase secrets to Git.
 
 ## Deploy to Vercel
 
 ### Vercel dashboard
 
 1. Import the GitHub repository in Vercel.
-2. Keep the framework preset as **Next.js** and the project root as `.`.
+2. Keep the framework preset as **Next.js** and set the project root directory to `companion`.
 3. Add `NEXT_PUBLIC_STORE_URL`, `SUPABASE_URL`, and `SUPABASE_SERVICE_ROLE_KEY` under **Settings → Environment Variables**. Use the existing static store origin for the first variable. Keep the service-role key private.
-4. Deploy. Vercel runs the Next.js build; future pushes to `main` deploy automatically.
+4. Deploy. Vercel runs the Next.js build from `companion/`; future pushes to the connected production branch deploy automatically.
 
 ### Vercel CLI
 
@@ -84,4 +80,4 @@ vercel env add SUPABASE_SERVICE_ROLE_KEY production
 vercel --prod
 ```
 
-Paste each value when prompted. Also add the same variables for **Preview** if preview deployments should use live tracking. After production deploy, set the new Vercel URL as the companion destination in the static site’s navigation.
+Run these commands from `companion/`. Paste each value when prompted. Also add the same variables for **Preview** if preview deployments should use live tracking. After production deploy, set the new Vercel URL as the companion destination in the static site’s navigation.
